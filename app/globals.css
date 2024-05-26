@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Atakana";
+  src: url("../public/fonts/Atakana-Script.ttf") format("truetype"),
+    url("../public/fonts/Atakana\ Script.otf") format("opentype");
+}
+
+@layer components {
+  .content-container {
+    @apply cursor-pointer hover:scale-[1.1] transition-all flex flex-col items-center;
+  }
+}
+
+* {
+  font-family: "Atakana", sans-serif;
+}
+
+.bg-home {
+  min-height: 100vh;
+  background-image: url("../public/images/website\ background.jpg");
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .bg-home {
+    width: 100vw;
+    height: 100vh;
+  }
+}
